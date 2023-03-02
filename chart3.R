@@ -2,14 +2,11 @@ library(scales)
 library(ggplot2)
 library(plotly)
 
-line_plot <- ggplot(f_scott) +
-  geom_line(aes(x = as.Date(Date),
-                y = ,
-                color = Name,
-                text = paste("Monthly Checkouts: ", monthly_checkouts ))) +
-  labs(title = "Monthly Checkouts of Jane Austen Novels",
-       x = "Date",
-       y = "Total Checkouts",
-       color = "Title")
-
-ggplotly(line_plot, tooltip = "text")
+bar_plot <- ggplot(data = f_scott) +
+  geom_col(mapping = aes(
+    x = MaterialType,
+    y= Checkouts,
+    fill = MaterialType,
+    text = paste("Medium:", MaterialType))
+  ) 
+ggplotly(bar_plot, tooltip = "text")

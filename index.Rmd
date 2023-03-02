@@ -45,6 +45,7 @@ From this graph, you are able to see which individual month's total number of ch
 ``````{r, echo = FALSE, code = readLines("chart2_example.R")}
 knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
 ```
+From this graph, you are able to see the evident trends of material type for Fitzgerald's books and it's very evident that there is a bigger push of physical books rather then audio books which come second in frequency then ebooks. The trends are slightly similar as well with an increase right before the summer then a decrease as summer progresses. The trendline also slightly goes up when school starts again in September. 
 
 ### Your Choice
 
@@ -52,4 +53,4 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
 ```
 
-
+From this graph, you are able to see the number of total checkouts throughout the years with Books being the greatest -- reaching close to 6,000. Audiobook falls behind going towards 1,000 with SoundDisc coming right below 1,000. EBook comes at around 500 - 600 and song and video are present but they barely contribute to the whole. 
