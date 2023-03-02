@@ -7,8 +7,9 @@ library("stringr")
 #Pulling out F. Scott Fitzgerald 
 f_scott <- book_data %>% filter(str_detect(book_data$Creator, "F. Scott"))
 
-#Avg Number of Checkouts for "The Great Gatsby" 
-avg_num_of_checkouts <- f_scott %>% filter(Checkouts == mean(Checkouts, na.rm = TRUE)) %>% pull(Checkouts)
+#Max Number of Checkouts for "The Great Gatsby" 
+max_num_of_checkouts <- f_scott %>% filter(Checkouts == max(Checkouts, na.rm = TRUE)) %>% pull(Checkouts)
+max_num_of_checkouts = 76 
 
 #Month and Year with Most/Least Checkouts 
 checkouts_max_yr <- f_scott %>% filter(Checkouts == max(Checkouts, na.rm = TRUE)) %>% pull(CheckoutYear)
